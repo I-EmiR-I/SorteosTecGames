@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.background{
+    width: 100%;
+    color: #000000;
+    background: linear-gradient(45deg,#00555b,#1e213d,#001a57,black);
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 10s ease-in-out infinite;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  
+    align-items: center;
+    overflow: auto;
+}
+h1{
+    font-size: 4rem;
+    letter-spacing: 2px;
+    border: solid 3px #fff;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 2rem 3rem;
+}
+
+@keyframes cambiar{
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: 'New Century Schoolbook', serif;
+    overflow: auto;
+}
+
+.wallet-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  max-width: 600px;
+  width: 100%;
+  
+}
+
+.wallet-container:hover {
+    transform: translateY(-10px); 
+}
+
+
+.payment-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.payment-option img {
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.payment-option img:hover {
+    transform: scale(1.1); 
+}
+
+.card-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  
+}
+
+.card-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card-form input {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.card-form button {
+    background-color: #0077cc;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card-form button:hover {
+    background-color: #005faa; 
+
+}
+
+a {
+  text-decoration: none;
+  background-color: #0077cc;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+ a:hover {
+  background-color: #005faa; 
+
+}
+
+/*
+.options {
+    margin-top: 20px;
+}
+
+.options a {
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.options a.active,
+.options a:hover {
+    background: #005fa8;
+    color: white;
+}
+*/
+#saved-cards {
+  max-height: 180px;
+  overflow-y: scroll;
+  /*
+  display: flex;
+  flex-direction: column;*/
+}
+
+.card-option {
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.card-option img {
+  width: 100px;
+  align-items: left;
+  
+}
+.card-option p {
+  margin-top: 40px;
+  margin-left: 80px;  
+}
+.card-option button{
+  background-color: #F42315;
+  color: #ffffff;
+  border: none;
+  margin: auto;
+  margin-left: 80px;
+  padding: 0;
+  width: 80px;
+  height:  40px;
+  /*1234 1234 1234 1234*/
+
+}
+.card-option button:hover {
+    background-color: #DC1205; 
+
+}
+
+
+.hidden {
+    display: none;
+}

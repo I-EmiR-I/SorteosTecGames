@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentacion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+        .endpoint {
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .endpoint h2 {
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        .param-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .param-table th, .param-table td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .param-table th {
+            background-color: #f2f2f2;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Documentation</h1>
+    
+    <div class="endpoint">
+        <h2>GET https://pentagonal-noiseless-evergreen.glitch.me/display_users</h2>
+        <p>Get lista de los usuarios registrados en la base de datos.</p>
+        <table class="param-table">
+            <tr>
+                <th>Parametros</th>
+                <th>Descripcion</th>
+            </tr>
+            <tr>
+                <td>No parameteros</td>
+                <td>Este endpoint no requiere ningun parametro.</td>
+            </tr>
+        </table>
+        <p><strong>Response:</strong></p>
+        <pre>
+{
+    "users": [
+        [1,"Luis","luis.a@gmail.com","1651dqef","Guzm\u00e1n","3","3","3",3,"Thu, 11 Apr 2024 22:04:13 GMT","Thu, 11 Apr 2024 22:04:13 GMT",null,null,null],
+        [2,"Luis","luis.a@gmail.com","1651dqef","Guzm\u00e1n","3","3","3",3,"Thu, 11 Apr 2024 22:06:29 GMT","Thu, 11 Apr 2024 22:06:29 GMT",null,null,null]
+    ]
+    
+}
+        </pre>
+    </div>
+    
+    <div class="endpoint">
+        <h2>GET  https://pentagonal-noiseless-evergreen.glitch.me/display_user?{id}</h2>
+        <p>Get informacion de un usuario en especifico.</p>
+        <table class="param-table">
+            <tr>
+                <th>Parameter</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>EL ID del usuario a obtener.</td>
+            </tr>
+        </table>
+        <p><strong>Response:</strong></p>
+        <pre>
+{
+[1,"Luis","luis.a@gmail.com","1651dqef","Guzm\u00e1n","3","3","3",3,"Thu, 11 Apr 2024 22:04:13 GMT","Thu, 11 Apr 2024 22:04:13 GMT",null,null,null]
+}
+        </pre>
+    </div>
+
+    <div class="endpoint">
+    <h2>POST https://pentagonal-noiseless-evergreen.glitch.me/create_user</h2>
+    <p>Crear un nuevo usuario.</p>
+    <table class="param-table">
+        <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>nombre</td>
+            <td>Nombre del usuario</td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td>Email del usuario</td>
+        </tr>
+        <tr>
+            <td>contraseña</td>
+            <td>Contraseña del usuario</td>
+        </tr>
+        <tr>
+            <td>apellido_paterno</td>
+            <td>Apellido paterno del usuario</td>
+        </tr>
+        <tr>
+            <td>apellido_materno</td>
+            <td>Apellido materno del usuario</td>
+        </tr>
+        <tr>
+            <td>ciudad</td>
+            <td>Ciudad del usuario</td>
+        </tr>
+        <tr>
+            <td>estado</td>
+            <td>Estado del usuario</td>
+        </tr>
+        <tr>
+            <td>telefono</td>
+            <td>Teléfono del usuario</td>
+        </tr>
+    </table>
+      <p><strong>Response:</strong></p>
+        <pre>
+        Usuario registrado exitosamente!
+        </pre>
+    </div>
+  
+    <div class="endpoint">
+        <h2>GET  https://pentagonal-noiseless-evergreen.glitch.me/win_or_loose</h2>
+        <p>Get regresa un estado ya sea de Win o Lose para verificar si el usuario gana o pierde en el juego de la garra.</p>
+        <table class="param-table">
+            <tr>
+                <th>Parameter</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>No parameteros</td>
+                <td>Este Endpoint no requiere ningun parametro</td>
+            </tr>
+        </table>
+        <p><strong>Response:</strong></p>
+        <pre>
+        Case 1: win
+        Case 2: lose
+        </pre>
+    </div>
+  
+    <div class="endpoint">
+        <h2>POST  https://pentagonal-noiseless-evergreen.glitch.me/Login</h2>
+        <p>POST Verifica que el correo y contraseña sean validos consultandolo a la base de datos.</p>
+        <table class="param-table">
+            <tr>
+                <th>Parameter</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>Email del usuario</td>
+            </tr>
+            <tr>
+                <td>Contraseña</td>
+                <td>Contraseña del usuario</td>
+            </tr>
+        </table>
+        <p><strong>Response:</strong></p>
+        <pre>
+        Case 1: (1, 'Alfredo Emir', 'emirpuente31@gmail.com', 'password123', 'Puente', 'Medrano', 'Monterrey', 'Nuevo Leon', '8112172390', datetime.datetime(2024, 4, 17, 0, 24, 26), datetime.datetime(2024, 4, 19, 22, 17, 53))
+        Case 2: Contraseña incorrecta.
+        </pre>
+    </div>
+
+
+</body>
+</html>

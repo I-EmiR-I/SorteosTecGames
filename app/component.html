@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Administrador</title>
+    <link rel="stylesheet" href="styles5.css"> 
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #0066cc;
+            overflow: hidden;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .navbar img {
+            height: 40px;
+            margin-right: 10px;
+            margin-top: 5px;
+            float: left;
+        }
+
+        .navbar a {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background-color: #0052cc;
+        }
+
+        .dropdown {
+            float: right;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: white;
+            background-color: inherit;
+            margin: 0;
+            padding: 14px 20px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0066cc;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #0052cc;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .container {
+            display: flex;
+            justify-content: right;
+            align-items: right;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .profile-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .profile-box:hover {
+            transform: translateY(-10px); 
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .reportes {
+            position: absolute;
+            bottom: 60px;
+            left: 30px;
+            max-width: calc(100% - 20px);
+            overflow-x: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .navbar img {
+                height: 30px;
+                margin-right: 5px;
+                margin-top: 2px;
+            }
+
+            .navbar a {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            .dropdown .dropbtn {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            .dropdown-content {
+                min-width: 120px;
+            }
+
+            .dropdown-content a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .profile-box {
+                padding: 20px;
+            }
+
+            .reportes {
+                bottom: 20px;
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="https://cdn.glitch.global/eb1848c4-7902-4754-863f-353b190f8da4/LogoSorteosTec.webp?v=1712986384189" alt="Logo">
+        <a href="/Test">Cerrar sesion</a>
+        <a href="/pagina_admin">Ir a Juegos</a>
+        <div class="dropdown">
+            <button class="dropbtn">Reportes</button>
+            <div class="dropdown-content">
+                <a href="listadeusuarios.html">Lista de Usuarios</a>
+                <a href="ventasportiempo.html">Ventas por Tiempo</a>
+                <a href="Metasalcanzadas.html">Metas Alcanzadas</a>
+            </div>
+        </div>
+        <a href="registro.html">Crear Nuevo Usuario</a>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>Bienvenido al Modo Administrador</h1>
+            <div class="profile-box">
+                <div class="profile-picture">
+                    <img src="https://cdn.glitch.global/eb1848c4-7902-4754-863f-353b190f8da4/teus.png?v=1712986386404" alt="Perfil">
+                </div>
+                <h2>Usario Administrador</h2>
+                <div class="profile-details">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reportes">
+        <h2>Vista rapida de reporte</h2>
+  <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/789a9131-c7d5-4f6d-9c00-eb4337bc9d60/page/p_3br2f6tugd" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>    </div>
+</body>
+</html>

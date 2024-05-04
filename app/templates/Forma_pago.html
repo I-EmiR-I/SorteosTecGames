@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet</title>
+    <link rel="stylesheet" href="styles7.css"> 
+</head>
+<body>
+    <div class="background">
+        <div class="wallet-container">
+            <h2>Abonar con:</h2>
+            <div class="payment-options">
+                <div class="payment-option" id="paypal">
+                    <img src="https://cdn.glitch.global/eb1848c4-7902-4754-863f-353b190f8da4/paypal.png?v=1713470015686" alt="Pagar con PayPal">
+                </div>
+                <div class="payment-option" id="applepay">
+                    <img src="https://cdn.glitch.global/eb1848c4-7902-4754-863f-353b190f8da4/aplepay.png?v=1713470009584" alt="Pagar con Apple Pay">
+                </div>
+            </div>
+            <div class="payment-details">
+                <div class="card-form" id="saved-cards">
+                  <h3>Tarjetas Guardadas</h3>
+                  <p id="texto">No hay tarjetas guardadas.</p>
+                  <!-- <div class="card-option hidden" id="listatarjetas"> 
+                    
+                  </div> -->
+                </div>
+                <div class="card-form" id="payWithCardButton">
+                    <h3>Abonar con tarjeta</h3>
+                </div>
+                <div class="card-form hidden" id="new-card-form">
+                    <form id="newCardForm" action="/agregar_tarjeta" method="POST">
+                        <input type="text" id="NumTarjeta" name="numerotarjeta" placeholder="Número de Tarjeta" required minlength="19">
+                        <input type="text" name="nombreTitular" placeholder="Nombre del titular" required>
+                        <input type="text" name="fechaVencimiento" placeholder="Fecha de Vencimiento" required>
+                        <input type="text" name="cvv" placeholder="CVV" required>         
+                        <button type="submit" id="agregarlista">ABONAR</button>
+                        <!--<a href="/Pago">Cancelar</a>-->
+                        <button type="buttom" id="salir">CANCELAR</button>
+                    </form>
+                </div>
+                <div class="card-form hidden" id="new-card-form-2">
+                  <form id="newCardForm" action="/Comprar_saldo"  method="POST">
+                      <input type="int" id="textuser" name="cantidad" placeholder="Cantidad" required>
+                      <button type="submit" id="agregarlista2">ABONAR</button>
+                     <!-- <a href="/Pago" >Cancelar</a> -->
+                      <button type="buttom" id="salir2">CANCELAR</button>  
+                    <!-- <button type="button" id="borrarlista">BORRAR</button>  -->
+
+                  </form>
+                </div>
+              <a href="/wallet">Regresar</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>

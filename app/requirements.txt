@@ -1,0 +1,5 @@
+Flask
+requests
+random2
+flask-cors
+mysql-connector-python

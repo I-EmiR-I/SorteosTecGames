@@ -1,0 +1,97 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.background {
+    background: linear-gradient(135deg, #00bfff, #00688b);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+#back {
+  height: 130%;
+}
+
+
+.login-box {
+    width: 400px; /* Aumentamos el tamaño verticalmente */
+    padding: 40px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    z-index: 2;
+}
+
+.textbox {
+    margin-bottom: 20px;
+    text-align: left; /* Alineamos el texto a la izquierda */
+    
+}
+
+.textbox input {
+    width: 100%;
+    padding: 10px;
+    background: #f2f2f2;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 80%;
+    background: #0077cc;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+.btn:hover {
+    background: #005fa8;
+}
+button {
+    width: 30%;
+    background: #0077cc;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+button:hover {
+    background: #005fa8;
+}
+a {
+    text-decoration: none;
+    color: #0077cc;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.options {
+    margin-top: 20px;
+}
+
+.options a {
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.options a.active,
+.options a:hover {
+    background: #005fa8;
+    color: white;
+}

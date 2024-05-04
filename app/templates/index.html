@@ -1,0 +1,33 @@
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="login-box">
+            <img src="https://cdn.glitch.global/eb1848c4-7902-4754-863f-353b190f8da4/LogoSorteosTec.webp?v=1712986384189" alt="Logo" width="300">
+            <h2>Iniciar Sesión</h2>
+            <p class="text-gray-500 dark-text-gray-400">Ingresa tus credenciales para acceder a tu cuenta.</p>
+            <form action="/TryLogin" method="POST">
+                <div class="textbox">
+                    <input type="email" placeholder="Correo electrónico" name="email" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" placeholder="Contraseña" name="password" required>
+                </div>
+                <div class="options">
+                    <button type="submit">Iniciar Sesión</button>
+                    <a href="/registro.html">Registrarse</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

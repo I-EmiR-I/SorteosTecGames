@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas</title>
+    <link rel="stylesheet" href="styles6.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+</head>
+<body>
+    <div class="background">
+        <div class="wave"></div>
+        <div class="stats-container">
+            <h2>Estadísticas de Juegos</h2>
+            <canvas id="gameStatsChart" width="400" height="200"></canvas> <!-- Lienzo para el gráfico -->
+            <a href="modo_administrador.html" class="btn-logout">Regresar</a>
+        </div>
+    </div>
+
+    <script>
+            const gameLabels = ['Videojuego Uno', 'Videojuego Dos', 'Videojuego Tres'];
+            const gameData = [500, 800, 600]; // Datos inventados para los juegos
+
+            // Configuración del gráfico de barras
+            const gameStatsChart = document.getElementById('gameStatsChart').getContext('2d');
+            const statsChart = new Chart(gameStatsChart, {
+                type: 'bar',
+                data: {
+                    labels: gameLabels,
+                    datasets: [{
+                        label: 'Ventas de Juegos',
+                        data: gameData,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.6)',
+                            'rgba(54, 162, 235, 0.6)',
+                            'rgba(255, 206, 86, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+    </script> 
+</body>
+</html>
